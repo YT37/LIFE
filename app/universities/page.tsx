@@ -12,6 +12,11 @@ import {
   Globe,
 } from "lucide-react";
 import { PageHero } from "@/components/page-hero";
+import { ComingSoon } from "@/components/coming-soon";
+
+export default function UniversitiesPage() {
+  return <ComingSoon />;
+}
 
 const educaroBenefits = [
   "Native German instructors",
@@ -49,7 +54,7 @@ const offerings = [
   },
 ];
 
-export default function UniversitiesPage() {
+function UniversitiesPageFull() {
   return (
     <>
       <PageHero

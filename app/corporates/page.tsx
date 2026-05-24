@@ -1,8 +1,13 @@
 import Link from "next/link";
 import { ArrowRight, Building2, Target, TrendingUp, Users2, Workflow, BarChart3 } from "lucide-react";
 import { PageHero } from "@/components/page-hero";
+import { ComingSoon } from "@/components/coming-soon";
 
 export const metadata = { title: "Corporate Partners | LIFE" };
+
+export default function CorporatesPage() {
+  return <ComingSoon />;
+}
 
 const services = [
   {
@@ -22,7 +27,7 @@ const services = [
   },
 ];
 
-export default function CorporatesPage() {
+function CorporatesPageFull() {
   return (
     <>
       <PageHero

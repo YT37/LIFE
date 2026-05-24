@@ -1,8 +1,13 @@
 import Link from "next/link";
 import { ArrowRight, Briefcase, LineChart, Globe, Award, Lightbulb, Layers } from "lucide-react";
 import { PageHero } from "@/components/page-hero";
+import { ComingSoon } from "@/components/coming-soon";
 
 export const metadata = { title: "Professionals | LIFE" };
+
+export default function ProfessionalsPage() {
+  return <ComingSoon />;
+}
 
 const tracks = [
   {
@@ -25,7 +30,7 @@ const tracks = [
   },
 ];
 
-export default function ProfessionalsPage() {
+function ProfessionalsPageFull() {
   return (
     <>
       <PageHero

@@ -1,36 +1,42 @@
-import Link from "next/link";
-import { ArrowRight, Briefcase, LineChart, Globe, Award, Lightbulb, Layers } from "lucide-react";
 import { PageHero } from "@/components/page-hero";
-import { ComingSoon } from "@/components/coming-soon";
+import {
+  ArrowRight,
+  Award,
+  Briefcase,
+  Globe,
+  Layers,
+  Lightbulb,
+  LineChart,
+} from "lucide-react";
+import Link from "next/link";
 
 export const metadata = { title: "Professionals | LIFE" };
-
-export default function ProfessionalsPage() {
-  return <ComingSoon />;
-}
 
 const tracks = [
   {
     icon: LineChart,
     title: "Executive education",
     duration: "6–9 weeks",
-    description: "Strategy, finance, and leadership masterclasses for senior leaders.",
+    description:
+      "Strategy, finance, and leadership masterclasses for senior leaders.",
   },
   {
     icon: Layers,
     title: "Technical deep dives",
     duration: "8–12 weeks",
-    description: "AI engineering, cloud architecture, product analytics, taught by practitioners.",
+    description:
+      "AI engineering, cloud architecture, product analytics, taught by practitioners.",
   },
   {
     icon: Globe,
     title: "Global mobility",
     duration: "12–16 weeks",
-    description: "Language, cultural fluency, and immigration-ready certifications for moving abroad.",
+    description:
+      "Language, cultural fluency, and immigration-ready certifications for moving abroad.",
   },
 ];
 
-function ProfessionalsPageFull() {
+export default function ProfessionalsPage() {
   return (
     <>
       <PageHero
@@ -63,7 +69,9 @@ function ProfessionalsPageFull() {
                     {t.duration}
                   </span>
                 </div>
-                <p className="mt-3 text-sm leading-6 text-muted-foreground">{t.description}</p>
+                <p className="mt-3 text-sm leading-6 text-muted-foreground">
+                  {t.description}
+                </p>
               </div>
             ))}
           </div>
@@ -81,16 +89,28 @@ function ProfessionalsPageFull() {
                 What graduates do next
               </h2>
               <p className="mt-4 text-sm leading-7 text-muted-foreground">
-                LIFE professional graduates have moved into senior roles at global companies, taken
-                international assignments, and launched companies that have collectively raised
-                over $80M.
+                LIFE professional graduates have moved into senior roles at
+                global companies, taken international assignments, and launched
+                companies that have collectively raised over $80M.
               </p>
             </div>
             <ul className="space-y-4">
               {[
-                { icon: Award, title: "Promotions", desc: "78% of grads receive a promotion within 18 months." },
-                { icon: Globe, title: "Global moves", desc: "1 in 4 grads transition to roles abroad." },
-                { icon: Lightbulb, title: "Founders", desc: "120+ alumni-led companies raised institutional capital." },
+                {
+                  icon: Award,
+                  title: "Promotions",
+                  desc: "78% of grads receive a promotion within 18 months.",
+                },
+                {
+                  icon: Globe,
+                  title: "Global moves",
+                  desc: "1 in 4 grads transition to roles abroad.",
+                },
+                {
+                  icon: Lightbulb,
+                  title: "Founders",
+                  desc: "120+ alumni-led companies raised institutional capital.",
+                },
               ].map((o) => (
                 <li
                   key={o.title}
@@ -101,7 +121,9 @@ function ProfessionalsPageFull() {
                   </span>
                   <div>
                     <div className="text-sm font-semibold">{o.title}</div>
-                    <p className="mt-1 text-sm text-muted-foreground">{o.desc}</p>
+                    <p className="mt-1 text-sm text-muted-foreground">
+                      {o.desc}
+                    </p>
                   </div>
                 </li>
               ))}

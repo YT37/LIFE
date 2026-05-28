@@ -1,22 +1,17 @@
-import Link from "next/link";
+import { PageHero } from "@/components/page-hero";
 import {
   ArrowRight,
-  Building,
-  GraduationCap,
-  Globe2,
-  BookOpen,
-  Users,
   Award,
-  Languages,
+  BookOpen,
+  Building,
   Check,
   Globe,
+  Globe2,
+  GraduationCap,
+  Languages,
+  Users,
 } from "lucide-react";
-import { PageHero } from "@/components/page-hero";
-import { ComingSoon } from "@/components/coming-soon";
-
-export default function UniversitiesPage() {
-  return <ComingSoon />;
-}
+import Link from "next/link";
 
 const educaroBenefits = [
   "Native German instructors",
@@ -54,7 +49,7 @@ const offerings = [
   },
 ];
 
-function UniversitiesPageFull() {
+export default function UniversitiesPage() {
   return (
     <>
       <PageHero
@@ -104,7 +99,12 @@ function UniversitiesPageFull() {
                 German Language Program with Educaro
               </h2>
               <p className="mt-4 text-sm leading-7 text-muted-foreground">
-                Integrate world-class language education into your curriculum through our partnership with <strong className="text-foreground">Educaro</strong>, Germany&apos;s leading online language platform. Give your students a direct route to European universities and the German workforce.
+                Integrate world-class language education into your curriculum
+                through our partnership with{" "}
+                <strong className="text-foreground">Educaro</strong>,
+                Germany&apos;s leading online language platform. Give your
+                students a direct route to European universities and the German
+                workforce.
               </p>
 
               <ul className="mt-8 space-y-3">
@@ -113,7 +113,9 @@ function UniversitiesPageFull() {
                     <span className="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#E03326] text-white">
                       <Check size={12} strokeWidth={3} />
                     </span>
-                    <span className="text-sm leading-6 text-muted-foreground">{b}</span>
+                    <span className="text-sm leading-6 text-muted-foreground">
+                      {b}
+                    </span>
                   </li>
                 ))}
               </ul>
@@ -135,7 +137,10 @@ function UniversitiesPageFull() {
                   { label: "Levels", value: "A1 to C1" },
                   { label: "Format", value: "100% Online" },
                   { label: "Cohorts", value: "Custom for Your Campus" },
-                  { label: "Outcomes", value: "European University Placements" },
+                  {
+                    label: "Outcomes",
+                    value: "European University Placements",
+                  },
                 ].map((card) => (
                   <div
                     key={card.label}
@@ -144,7 +149,9 @@ function UniversitiesPageFull() {
                     <div className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
                       {card.label}
                     </div>
-                    <div className="mt-2 text-base font-semibold leading-snug">{card.value}</div>
+                    <div className="mt-2 text-base font-semibold leading-snug">
+                      {card.value}
+                    </div>
                   </div>
                 ))}
                 <div className="col-span-2 rounded-2xl bg-[#4d43b5] p-6 text-white shadow-lg">
@@ -155,7 +162,8 @@ function UniversitiesPageFull() {
                     </span>
                   </div>
                   <p className="mt-3 text-base leading-6">
-                    Trusted by partner institutions to deliver native-speaker German programs end to end.
+                    Trusted by partner institutions to deliver native-speaker
+                    German programs end to end.
                   </p>
                 </div>
               </div>
@@ -175,9 +183,10 @@ function UniversitiesPageFull() {
                 12 colleges. 4,800 students. One curriculum.
               </h2>
               <p className="mt-4 text-sm leading-7 text-muted-foreground">
-                A consortium of engineering colleges in South India partnered with LIFE to roll out
-                a unified industry-readiness program. Within a single academic year, placement
-                rates rose by 27% and employer satisfaction scores hit an all-time high.
+                A consortium of engineering colleges in South India partnered
+                with LIFE to roll out a unified industry-readiness program.
+                Within a single academic year, placement rates rose by 27% and
+                employer satisfaction scores hit an all-time high.
               </p>
             </div>
             <div className="grid grid-cols-2 gap-4">
@@ -191,7 +200,9 @@ function UniversitiesPageFull() {
                   key={s.label}
                   className="rounded-2xl border border-border bg-background p-6"
                 >
-                  <div className="text-3xl font-semibold gradient-text">{s.value}</div>
+                  <div className="text-3xl font-semibold gradient-text">
+                    {s.value}
+                  </div>
                   <div className="mt-1 text-xs text-muted-foreground uppercase tracking-wider">
                     {s.label}
                   </div>
@@ -210,8 +221,8 @@ function UniversitiesPageFull() {
               Let&apos;s build the next chapter together
             </h2>
             <p className="mx-auto mt-3 max-w-xl text-sm leading-6 text-muted-foreground">
-              Tell us about your institution. We&apos;ll design a partnership tailored to your students,
-              your faculty, and your strategic goals.
+              Tell us about your institution. We&apos;ll design a partnership
+              tailored to your students, your faculty, and your strategic goals.
             </p>
             <Link
               href="/contact"

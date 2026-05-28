@@ -1,4 +1,4 @@
-import { LifeLogo } from "@/components/life-logo";
+import { Logo } from "@/components/logo";
 import { Mail, MapPin, Phone } from "lucide-react";
 import Link from "next/link";
 
@@ -62,7 +62,7 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div>
             <Link href="/" className="inline-flex" aria-label="LIFE home">
-              <LifeLogo className="h-9 w-auto" />
+              <Logo className="h-12 w-auto" />
             </Link>
             <p className="mt-4 text-sm leading-6 text-muted-foreground max-w-xs">
               Liberal Institute of Future Education. Bridging gaps between

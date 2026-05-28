@@ -38,9 +38,6 @@ function Hero() {
 
       <div className="relative mx-auto max-w-7xl px-4 pt-20 pb-24 sm:px-6 sm:pt-28 sm:pb-32 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
-          <span className="inline-flex items-center gap-2 rounded-full border border-[#4d43b5]/20 bg-white/80 px-4 py-1.5 text-xs font-medium text-[#4d43b5] shadow-sm backdrop-blur">
-            Liberal Institute of Future Education
-          </span>
           <h1 className="mt-6 text-5xl font-semibold tracking-tight sm:text-6xl lg:text-7xl">
             Bridge Your <span className="gradient-text">Future</span>
           </h1>

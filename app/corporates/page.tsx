@@ -1,33 +1,39 @@
-import Link from "next/link";
-import { ArrowRight, Building2, Target, TrendingUp, Users2, Workflow, BarChart3 } from "lucide-react";
 import { PageHero } from "@/components/page-hero";
-import { ComingSoon } from "@/components/coming-soon";
+import {
+  ArrowRight,
+  BarChart3,
+  Building2,
+  Target,
+  TrendingUp,
+  Users2,
+  Workflow,
+} from "lucide-react";
+import Link from "next/link";
 
 export const metadata = { title: "Corporate Partners | LIFE" };
-
-export default function CorporatesPage() {
-  return <ComingSoon />;
-}
 
 const services = [
   {
     icon: Workflow,
     title: "Team upskilling",
-    description: "Cohort-based reskilling programs in AI, product, leadership, and language.",
+    description:
+      "Cohort-based reskilling programs in AI, product, leadership, and language.",
   },
   {
     icon: Target,
     title: "Talent pipeline",
-    description: "Hire from a curated pool of LIFE-trained graduates pre-screened to your roles.",
+    description:
+      "Hire from a curated pool of LIFE-trained graduates pre-screened to your roles.",
   },
   {
     icon: BarChart3,
     title: "Outcomes dashboards",
-    description: "Track learner engagement, skill uplift, and dollar ROI in one place.",
+    description:
+      "Track learner engagement, skill uplift, and dollar ROI in one place.",
   },
 ];
 
-function CorporatesPageFull() {
+export default function CorporatesPage() {
   return (
     <>
       <PageHero
@@ -55,7 +61,9 @@ function CorporatesPageFull() {
                   <s.icon size={22} />
                 </div>
                 <h3 className="mt-5 text-lg font-semibold">{s.title}</h3>
-                <p className="mt-3 text-sm leading-6 text-muted-foreground">{s.description}</p>
+                <p className="mt-3 text-sm leading-6 text-muted-foreground">
+                  {s.description}
+                </p>
               </div>
             ))}
           </div>
@@ -67,9 +75,17 @@ function CorporatesPageFull() {
           <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
             <div className="order-2 lg:order-1 grid grid-cols-2 gap-4">
               {[
-                { icon: TrendingUp, value: "3.4×", label: "ROI on training spend" },
+                {
+                  icon: TrendingUp,
+                  value: "3.4×",
+                  label: "ROI on training spend",
+                },
                 { icon: Users2, value: "92%", label: "Cohort completion rate" },
-                { icon: Target, value: "<6mo", label: "Time to measurable uplift" },
+                {
+                  icon: Target,
+                  value: "<6mo",
+                  label: "Time to measurable uplift",
+                },
                 { icon: BarChart3, value: "40+", label: "Skills tracked" },
               ].map((s) => (
                 <div
@@ -77,7 +93,9 @@ function CorporatesPageFull() {
                   className="rounded-2xl border border-border bg-background p-6"
                 >
                   <s.icon size={18} className="text-[#E03326]" />
-                  <div className="mt-3 text-2xl font-semibold gradient-text">{s.value}</div>
+                  <div className="mt-3 text-2xl font-semibold gradient-text">
+                    {s.value}
+                  </div>
                   <div className="mt-1 text-xs uppercase tracking-wider text-muted-foreground">
                     {s.label}
                   </div>
@@ -92,9 +110,9 @@ function CorporatesPageFull() {
                 Learning that ties back to the P&amp;L
               </h2>
               <p className="mt-4 text-sm leading-7 text-muted-foreground">
-                We build the program around your business outcome (faster onboarding, lower
-                attrition, higher revenue per engineer) and instrument every learner journey so
-                you can prove the impact.
+                We build the program around your business outcome (faster
+                onboarding, lower attrition, higher revenue per engineer) and
+                instrument every learner journey so you can prove the impact.
               </p>
               <Link
                 href="/contact"

@@ -8,9 +8,8 @@ import {
   Users2,
   Workflow,
 } from "lucide-react";
-import Link from "next/link";
+import { Link } from "react-router-dom";
 
-export const metadata = { title: "Corporate Partners | LIFE" };
 
 const services = [
   {
@@ -42,7 +41,7 @@ export default function CorporatesPage() {
         description="LIFE designs and delivers outcome-driven learning programs for fast-growing companies and global enterprises. Every program is tied to a metric your CFO cares about."
       >
         <Link
-          href="/contact"
+          to="/contact"
           className="inline-flex items-center gap-2 rounded-full bg-[#4d43b5] px-6 py-3 text-sm font-medium text-white shadow-lg shadow-[#4d43b5]/25 hover:bg-[#3d349a] transition"
         >
           Talk to enterprise team <ArrowRight size={16} />
@@ -115,7 +114,7 @@ export default function CorporatesPage() {
                 instrument every learner journey so you can prove the impact.
               </p>
               <Link
-                href="/contact"
+                to="/contact"
                 className="mt-6 inline-flex items-center gap-2 rounded-full bg-[#4d43b5] px-6 py-3 text-sm font-medium text-white shadow-lg shadow-[#4d43b5]/25 hover:bg-[#3d349a] transition"
               >
                 Get a custom proposal <ArrowRight size={16} />

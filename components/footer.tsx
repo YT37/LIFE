@@ -1,6 +1,6 @@
 import { Logo } from "@/components/logo";
 import { Mail, MapPin, Phone } from "lucide-react";
-import Link from "next/link";
+import { Link } from "react-router-dom";
 
 function SocialIcon({ d, label }: { d: string; label: string }) {
   return (
@@ -61,11 +61,11 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div>
-            <Link href="/" className="inline-flex" aria-label="LIFE home">
+            <Link to="/" className="inline-flex" aria-label="LIFE home">
               <Logo className="h-12 w-auto" />
             </Link>
             <p className="mt-4 text-sm leading-6 text-muted-foreground max-w-xs">
-              Liberal Institute of Future Education. Bridging gaps between
+              Liberal Institute for Future Education. Bridging gaps between
               current status and future opportunities.
             </p>
             <p className="mt-4 text-xs font-semibold uppercase tracking-wider text-[#4d43b5]">
@@ -79,7 +79,7 @@ export function Footer() {
               {programs.map((item) => (
                 <li key={item.href}>
                   <Link
-                    href={item.href}
+                    to={item.href}
                     className="text-sm text-muted-foreground hover:text-foreground"
                   >
                     {item.label}
@@ -95,7 +95,7 @@ export function Footer() {
               {resources.map((item) => (
                 <li key={item.href}>
                   <Link
-                    href={item.href}
+                    to={item.href}
                     className="text-sm text-muted-foreground hover:text-foreground"
                   >
                     {item.label}
@@ -110,20 +110,20 @@ export function Footer() {
             <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
               <li className="flex items-start gap-3">
                 <MapPin size={16} className="mt-0.5 shrink-0" />
-                <span>TRACE Expert City, Colombo, Sri Lanka</span>
+                <span>Bay X, TRACE Expert City, Maradana, Sri Lanka</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={16} className="shrink-0" />
                 <a
-                  href="mailto:hello@lifeinstitute.org"
+                  href="mailto:hello@life.edu.lk"
                   className="hover:text-foreground"
                 >
-                  hello@lifeinstitute.org
+                  hello@life.edu.lk
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={16} className="shrink-0" />
-                <span>+94 11 234 5678</span>
+                <span>+94 707 225 225</span>
               </li>
             </ul>
           </div>
@@ -131,7 +131,7 @@ export function Footer() {
 
         <div className="mt-12 flex flex-col items-start justify-between gap-6 border-t border-border pt-8 md:flex-row md:items-center">
           <p className="text-xs text-muted-foreground">
-            © 2026 LIFE - Liberal Institute of Future Education. All rights
+            © 2026 LIFE - Liberal Institute for Future Education. All rights
             reserved.
           </p>
           <div className="flex items-center gap-4">

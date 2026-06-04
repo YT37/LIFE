@@ -1,8 +1,6 @@
-"use client";
-
 import { Logo } from "@/components/logo";
 import { Menu, X } from "lucide-react";
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 
 const navLinks = [
@@ -12,6 +10,7 @@ const navLinks = [
   { href: "/students", label: "Students" },
   { href: "/professionals", label: "Professionals" },
   { href: "/programs", label: "Programs" },
+  { href: "/partnerships", label: "Partners" },
   { href: "/blog", label: "Blog" },
 ];
 
@@ -21,7 +20,7 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-xl">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link href="/" className="flex items-center" aria-label="LIFE home">
+        <Link to="/" className="flex items-center" aria-label="LIFE home">
           <Logo className="h-10 w-auto" />
         </Link>
 
@@ -29,7 +28,7 @@ export function Navbar() {
           {navLinks.map((link) => (
             <Link
               key={link.href}
-              href={link.href}
+              to={link.href}
               className="rounded-lg px-3 py-2 text-sm font-medium text-muted-foreground transition hover:bg-muted hover:text-foreground"
             >
               {link.label}
@@ -39,7 +38,7 @@ export function Navbar() {
 
         <div className="flex items-center gap-2">
           <Link
-            href="/contact"
+            to="/contact"
             className="hidden sm:inline-flex items-center rounded-full bg-[#4d43b5] px-5 py-2 text-sm font-medium text-white transition hover:bg-[#3d349a]"
           >
             Get Started
@@ -62,7 +61,7 @@ export function Navbar() {
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
-                  href={link.href}
+                  to={link.href}
                   onClick={() => setOpen(false)}
                   className="rounded-lg px-3 py-2 text-sm font-medium text-muted-foreground hover:bg-muted hover:text-foreground"
                 >
@@ -70,7 +69,7 @@ export function Navbar() {
                 </Link>
               ))}
               <Link
-                href="/contact"
+                to="/contact"
                 onClick={() => setOpen(false)}
                 className="mt-2 inline-flex items-center justify-center rounded-full bg-[#4d43b5] px-5 py-2.5 text-sm font-medium text-white"
               >

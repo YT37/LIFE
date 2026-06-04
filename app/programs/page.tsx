@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import {
   ArrowRight,
   Languages,
@@ -17,7 +17,6 @@ import {
 } from "lucide-react";
 import { PageHero } from "@/components/page-hero";
 
-export const metadata = { title: "Programs | LIFE" };
 
 type Program = {
   id: string;
@@ -243,7 +242,7 @@ export default function ProgramsPage() {
                   </dl>
 
                   <Link
-                    href="/contact"
+                    to="/contact"
                     className="mt-6 inline-flex items-center gap-2 self-start text-sm font-medium transition group-hover:gap-3"
                   >
                     Enroll now <ArrowRight size={14} />
@@ -266,13 +265,13 @@ export default function ProgramsPage() {
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Link
-              href="/contact"
+              to="/contact"
               className="inline-flex items-center gap-2 rounded-full bg-[#E03326] px-6 py-3 text-sm font-medium text-white shadow-lg shadow-[#E03326]/25 transition hover:bg-[#c52b20]"
             >
               Schedule a consultation <ArrowRight size={16} />
             </Link>
             <Link
-              href="/blog"
+              to="/blog"
               className="inline-flex items-center gap-2 rounded-full border-2 border-[#4d43b5] bg-background px-6 py-3 text-sm font-medium text-[#4d43b5] hover:bg-[#4d43b5] hover:text-white"
             >
               Read learner stories

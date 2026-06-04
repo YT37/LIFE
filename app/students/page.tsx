@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import {
   ArrowRight,
   Compass,
@@ -12,7 +12,6 @@ import {
 } from "lucide-react";
 import { PageHero } from "@/components/page-hero";
 
-export const metadata = { title: "Students | LIFE" };
 
 const journey = [
   {
@@ -57,7 +56,7 @@ export default function StudentsPage() {
         description="Gain the skills, knowledge, and connections you need to stand out in the job market. Career-focused programs designed to bridge the gap between education and employment."
       >
         <Link
-          href="/programs"
+          to="/programs"
           className="inline-flex items-center gap-2 rounded-full bg-[#E03326] px-6 py-3 text-sm font-medium text-white shadow-lg shadow-[#E03326]/25 hover:bg-[#c52b20] transition"
         >
           Browse Programs <ArrowRight size={16} />
@@ -113,13 +112,13 @@ export default function StudentsPage() {
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <Link
-                  href="/programs#german-a1-a2"
+                  to="/partnerships"
                   className="inline-flex items-center gap-2 rounded-full bg-[#4d43b5] px-6 py-3 text-sm font-medium text-white hover:bg-[#3d349a] transition"
                 >
-                  Explore German Program <ArrowRight size={16} />
+                  Explore the Germany Pathway <ArrowRight size={16} />
                 </Link>
                 <Link
-                  href="/contact"
+                  to="/contact"
                   className="inline-flex items-center gap-2 rounded-full border-2 border-[#4d43b5] bg-background px-6 py-3 text-sm font-medium text-[#4d43b5] hover:bg-[#4d43b5] hover:text-white transition"
                 >
                   Talk to an advisor

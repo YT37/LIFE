@@ -8,9 +8,8 @@ import {
   Lightbulb,
   LineChart,
 } from "lucide-react";
-import Link from "next/link";
+import { Link } from "react-router-dom";
 
-export const metadata = { title: "Professionals | LIFE" };
 
 const tracks = [
   {
@@ -45,7 +44,7 @@ export default function ProfessionalsPage() {
         description="Executive education, global certifications, and senior peer cohorts, built for professionals with 3+ years of experience who are ready to level up."
       >
         <Link
-          href="/programs"
+          to="/programs"
           className="inline-flex items-center gap-2 rounded-full bg-[#4d43b5] px-6 py-3 text-sm font-medium text-white shadow-lg shadow-[#4d43b5]/25 hover:bg-[#3d349a] transition"
         >
           Explore tracks <ArrowRight size={16} />

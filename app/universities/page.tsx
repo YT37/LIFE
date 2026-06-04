@@ -11,7 +11,7 @@ import {
   Languages,
   Users,
 } from "lucide-react";
-import Link from "next/link";
+import { Link } from "react-router-dom";
 
 const educaroBenefits = [
   "Native German instructors",
@@ -20,7 +20,6 @@ const educaroBenefits = [
   "Co-branded credentials your students can carry into the job market",
 ];
 
-export const metadata = { title: "Universities & Colleges | LIFE" };
 
 const offerings = [
   {
@@ -58,7 +57,7 @@ export default function UniversitiesPage() {
         description="LIFE works with universities and colleges to extend your reach, deepen your industry connections, and graduate students who are ready for global careers."
       >
         <Link
-          href="/contact"
+          to="/contact"
           className="inline-flex items-center gap-2 rounded-full bg-[#E03326] px-6 py-3 text-sm font-medium text-white shadow-lg shadow-[#E03326]/25 hover:bg-[#c52b20] transition"
         >
           Partner with LIFE <ArrowRight size={16} />
@@ -122,7 +121,7 @@ export default function UniversitiesPage() {
 
               <div className="mt-8">
                 <Link
-                  href="/programs#german-a1-a2"
+                  to="/partnerships"
                   className="inline-flex items-center gap-2 rounded-full bg-[#4d43b5] px-6 py-3 text-sm font-medium text-white hover:bg-[#3d349a] transition"
                 >
                   Learn more about Educaro <ArrowRight size={16} />
@@ -225,7 +224,7 @@ export default function UniversitiesPage() {
               tailored to your students, your faculty, and your strategic goals.
             </p>
             <Link
-              href="/contact"
+              to="/contact"
               className="mt-6 inline-flex items-center gap-2 rounded-full bg-[#E03326] px-6 py-3 text-sm font-medium text-white shadow-lg shadow-[#E03326]/25 hover:bg-[#c52b20] transition"
             >
               Book a discovery call <ArrowRight size={16} />

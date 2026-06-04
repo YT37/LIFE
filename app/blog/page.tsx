@@ -1,8 +1,7 @@
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import { ArrowRight, Calendar, Clock } from "lucide-react";
 import { PageHero } from "@/components/page-hero";
 
-export const metadata = { title: "Blog | LIFE" };
 
 const posts = [
   {
@@ -102,7 +101,7 @@ export default function BlogPage() {
                 </div>
                 <div className="flex flex-1 flex-col p-6">
                   <h3 className="text-lg font-semibold leading-snug">
-                    <Link href="#" className="hover:underline">
+                    <Link to="#" className="hover:underline">
                       {post.title}
                     </Link>
                   </h3>
@@ -119,7 +118,7 @@ export default function BlogPage() {
                     </span>
                   </div>
                   <Link
-                    href="#"
+                    to="#"
                     className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-foreground transition group-hover:gap-3"
                   >
                     Read story <ArrowRight size={14} />

@@ -14,6 +14,10 @@
   --brand-red: #e03326;
   --brand-purple: #4d43b5;
   --brand-yellow: #ffc629;
+
+  --font-geist-sans: "Geist", system-ui, -apple-system, sans-serif;
+  --font-geist-mono: "Geist Mono", ui-monospace, SFMono-Regular, "SF Mono",
+    Menlo, monospace;
 }
 
 @theme inline {

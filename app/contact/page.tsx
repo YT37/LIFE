@@ -1,8 +1,6 @@
 import { PageHero } from "@/components/page-hero";
 import { ArrowRight, Mail, MapPin, Phone } from "lucide-react";
 
-export const metadata = { title: "Get in touch | LIFE" };
-
 export default function ContactPage() {
   return (
     <>
@@ -19,13 +17,13 @@ export default function ContactPage() {
               <ContactItem
                 icon={Mail}
                 title="Email"
-                value="hello@lifeinstitute.org"
+                value="hello@life.edu.lk"
               />
-              <ContactItem icon={Phone} title="Phone" value="+94 11 234 5678" />
+              <ContactItem icon={Phone} title="Phone" value="+94 707 225 225" />
               <ContactItem
                 icon={MapPin}
                 title="Headquarters"
-                value="TRACE Expert City, Colombo, Sri Lanka"
+                value="Bay X, TRACE Expert City, Maradana, Sri Lanka"
               />
             </div>
 

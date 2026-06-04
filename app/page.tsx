@@ -13,7 +13,7 @@ import {
   TrendingUp,
   Users,
 } from "lucide-react";
-import Link from "next/link";
+import { Link } from "react-router-dom";
 
 export default function HomePage() {
   return (
@@ -48,13 +48,13 @@ function Hero() {
           </p>
           <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Link
-              href="/programs"
+              to="/programs"
               className="inline-flex items-center gap-2 rounded-full bg-[#E03326] px-6 py-3 text-sm font-medium text-white shadow-lg shadow-[#E03326]/25 transition hover:bg-[#c52b20]"
             >
               Explore Programs <ArrowRight size={16} />
             </Link>
             <Link
-              href="/contact"
+              to="/contact"
               className="inline-flex items-center gap-2 rounded-full border-2 border-[#4d43b5] bg-white/70 px-6 py-3 text-sm font-medium text-[#4d43b5] backdrop-blur transition hover:bg-[#4d43b5] hover:text-white"
             >
               Schedule Consultation
@@ -153,7 +153,7 @@ function AudienceCards() {
             return (
               <Link
                 key={item.title}
-                href={item.href}
+                to={item.href}
                 className="group relative flex flex-col overflow-hidden rounded-3xl p-7 transition hover:-translate-y-1 hover:shadow-2xl"
                 style={{ backgroundColor: item.bg, color: textColor }}
               >
@@ -233,7 +233,7 @@ function FeaturedPartnership() {
 
             <div className="mt-8">
               <Link
-                href="/programs#german"
+                to="/partnerships"
                 className="inline-flex items-center gap-2 rounded-full bg-[#4d43b5] px-6 py-3 text-sm font-medium text-white transition hover:bg-[#3d349a]"
               >
                 Learn More About Educaro <ArrowRight size={16} />
@@ -432,7 +432,7 @@ function Testimonials() {
 
         <div className="mt-12 text-center">
           <Link
-            href="/success-stories"
+            to="/success-stories"
             className="inline-flex items-center gap-2 rounded-full border-2 border-[#4d43b5] bg-background px-6 py-3 text-sm font-medium text-[#4d43b5] hover:bg-[#4d43b5] hover:text-white"
           >
             View All Success Stories <ArrowRight size={16} />
@@ -460,13 +460,13 @@ function FinalCta() {
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link
-                href="/contact"
+                to="/contact"
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-[#FFC629] px-6 py-3 text-sm font-medium text-[#1a1530] transition hover:bg-[#ffd34d]"
               >
                 Get in Touch <ArrowRight size={16} />
               </Link>
               <Link
-                href="/programs"
+                to="/programs"
                 className="inline-flex items-center justify-center rounded-full border-2 border-white/40 bg-transparent px-6 py-3 text-sm font-medium text-white backdrop-blur transition hover:bg-white/15"
               >
                 Browse All Programs

@@ -13,9 +13,11 @@ import ContactPage from "@/app/contact/page";
 import CorporatesPage from "@/app/corporates/page";
 import HomePage from "@/app/page";
 import PartnershipsPage from "@/app/partnerships/page";
+import PrivacyPage from "@/app/privacy/page";
 import ProfessionalsPage from "@/app/professionals/page";
 import ProgramsPage from "@/app/programs/page";
 import StudentsPage from "@/app/students/page";
+import TermsPage from "@/app/terms/page";
 import UniversitiesPage from "@/app/universities/page";
 
 function ScrollManager() {
@@ -56,9 +58,11 @@ export default function App() {
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/corporates" element={<CorporatesPage />} />
           <Route path="/partnerships" element={<PartnershipsPage />} />
+          <Route path="/privacy" element={<PrivacyPage />} />
           <Route path="/professionals" element={<ProfessionalsPage />} />
           <Route path="/programs" element={<ProgramsPage />} />
           <Route path="/students" element={<StudentsPage />} />
+          <Route path="/terms" element={<TermsPage />} />
           <Route path="/universities" element={<UniversitiesPage />} />
         </Route>
       </Routes>

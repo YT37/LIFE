@@ -130,10 +130,26 @@ export function Footer() {
         </div>
 
         <div className="mt-12 flex flex-col items-start justify-between gap-6 border-t border-border pt-8 md:flex-row md:items-center">
-          <p className="text-xs text-muted-foreground">
-            © 2026 LIFE - Liberal Institute for Future Education. All rights
-            reserved.
-          </p>
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-6">
+            <p className="text-xs text-muted-foreground">
+              © 2026 LIFE - Liberal Institute for Future Education. All rights
+              reserved.
+            </p>
+            <div className="flex items-center gap-4">
+              <Link
+                to="/privacy"
+                className="text-xs text-muted-foreground hover:text-foreground"
+              >
+                Privacy Policy
+              </Link>
+              <Link
+                to="/terms"
+                className="text-xs text-muted-foreground hover:text-foreground"
+              >
+                Terms of Service
+              </Link>
+            </div>
+          </div>
           <div className="flex items-center gap-4">
             {socials.map((s) => (
               <SocialIcon key={s.label} d={s.d} label={s.label} />
